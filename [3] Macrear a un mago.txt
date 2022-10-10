@@ -1,21 +1,23 @@
 
 // 1) Material: spellbook con perga de flecha magica y toda la ceniza sulfurosa que puedas
-// * Si cambias el hechizo, ten en cuenta que puede cambiar el tiempo de casteo y tipo de regs
+//    * Si cambias el hechizo, ten en cuenta que puede cambiar el tiempo de casteo y tipo de regs
 // 2) Configuracion:
-//    F1 = castspell > magic arrow + waitfortarget + targetself
-//    F2 = useskill > meditation
-//    * Conforme se suba la skill de medit ir ajustando el número de casteos y meditación en los bucles
+//    F1 = castspell > magic arrow + waitfortarget + targetself (o cambiar Set #CastSpell)
+//    F2 = useskill > meditation (o cambiar Set #Meditation)
+
+Set #CastSpell F1
+Set #Meditation F2
 
 // BUCLE MAGIA
 // IMPORTANTE repeticiones suficientes para gastar mana no recuperable pasivo
-repeat 1 // 1 // 25
- send f1
+repeat 1 
+ send #CastSpell
  wait 1700
 end_repeat
 
 // BUCLE MEDITAR
 // IMPORTANTE repeticiones suficientes para entrar en trance
-repeat 3 // 3 // 20
- send f2
+repeat 3
+ send #Meditation
  wait 1500
 end_repeat
