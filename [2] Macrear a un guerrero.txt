@@ -1,0 +1,13 @@
+
+// 1) Lugar: Afueras de britain vs duendes (buscar zonas de respawn donde no se junten demasiados)
+// 2) Material: Ir desnudo, solo llevar en la mochila vendas suficientes y escudos o armas reforzadas
+// 3) BONUS > Opcion de reponer arma/escudo configurando las coordenadas del click en la mochila
+//     - Borrar // en la linea de double_left)
+//     - Configurar vista de mochila en options > interface > use gridded container gumps: > backpack
+//     - Sacar las coordenadas de una casilla en la que SIEMPRE encontraremos en item que queremos con CTRL + A
+// 4) Configuracion: F1 > Bandageself
+
+
+Send F1
+wait 2000
+// Double_Left 1402, 443 abs
