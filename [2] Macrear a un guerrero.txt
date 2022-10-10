@@ -5,10 +5,10 @@
 //     - Borrar // en la linea de double_left)
 //     - Configurar vista de mochila en options > interface > use gridded container gumps: > backpack
 //     - Sacar las coordenadas de una casilla en la que SIEMPRE encontraremos en item que queremos con CTRL + A
-// 4) Configuracion: F1 > Bandageself  (o cambiar Set #Curar)
+// 4) Configuracion: F1 > Bandageself  (o cambiar Set $Curar)
 
-Set #Curar F1
+Set $Curar F1
 
-Send #Curar
+Send $Curar
 wait 2000
 // Double_Left 1402, 443 abs
