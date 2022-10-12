@@ -1,0 +1,166 @@
+
+
+
+
+            VER TUTORIAL EN
+        https://youtu.be/8j1fGG2naZw
+
+
+
+==================================================
+============== [VARIABLES GLOBALES] ==============
+==================================================
+! LOS DATOS QUE TU INTRODUCES
+• Introducidas por un Set
+• Empiezan por:
+  # - Concretas
+  $ - Relativas
+  % -
+• Formadas por letras (a-z) y/o números (0-9)
+  
+================================================== 
+======= [VARIABLES RESERVADAS INDEFINIDAS] =======
+==================================================
+! LAS HOTKEYS QUE HAS DEFINIDO EN UO
+Sobretodo los USESKILL, tendrás que bindearlos en las hotkeys de UO y poner send {HOTKEY}
+ 
+
+==================================================
+==================== [PAUSAS] ====================
+==================================================
+! Por defecto las pausas se leen en milisegundos (1000 = 1 segundo), pero podemos simplificar:
+wait 500 // 0.5 segundos
+wait 5s // 5 segundos
+wait 1m // 60 segundos
+wait 1h // 3600 segundos
+! 
+
+! Podemos parar, pausar, reiniciar... la macro con los comandos:
+
+start_script <number>
+pause_script <number | all>
+resume_script <number | all>
+End_script <number | all>
+stop_script <number | all>
+
+==================================================
+==================== [CURSOR] ====================
+==================================================
+ ! SACAR LAS COORDENADAS CON CTRL + A
+
+Move <coordinate>
+Left <coordinate>
+Right <coordinate>
+Double_Left <coordinate>
+Double_Right <coordinate>
+left_down <coordinate>
+left_up <coordinate>
+right_down <coordinate>
+right_up <coordinate>
+* Añade "abs" si la posición es absoluta (relativa a la pantalla) o nada si es relativa a la ventana de UO
+
+================================================== 
+===================== [OTROS] ====================
+==================================================
+
+Send <a key [a pause]> | <the text>
+"To press" a key and to wait the specified number ms. If parameter is not recognized as a managing key, it is sent as the text. In the latter case command works similarly to command say, except for finishing 'Enter'.
+
+Sendex < the list of keys >
+"To press" consistently some keys. Sends practically all combinations of keys. The keys Ctrl, Alt, Shift are coded by symbols ^, @ and ~ accordingly. All function keys should be made in braces, for example: {Enter}. In one command there can be a whole offer from keys:
+sendex ~closing ~application @{f4}
+There is a following property: the application will accept only those keys (symbolical), which correspond established in it layout of the keyboard.
+In execution time of the command, the application should be active and on it the focus should be directed.
+
+Drag <whence> <where> [amount]
+To transfer from a point with coordinates <whence>, to a point with coordinates <where>, specified amount of items. The coordinates <whence> and <where> can be only relative. If not to specify amount, one will be transferred a not stacked item (the window with amount does not emerge) if to specify 'all', all items will be transferred.
+For example:
+Drag #x #y 320, 240
+
+Say [the text]
+To type the text and to press Enter. For example:
+say my x: coordx y: coordy and armor: ar
+
+ 
+================================================== 
+============== [CONDICIONALES - IF] ==============
+==================================================
+! SE PUEDEN USAR OPERADORESS (< > = == <>) Y OPERACIONES LÓGICAS (and, or, xor)
+if <condition>
+...
+end_if
+
+Or
+
+if <condition>
+...
+else
+...
+end_if
+
+Or
+
+if_not <condition>
+...
+end_if
+
+Or
+
+if_not <condition>
+...
+else
+...
+end_if
+================================================== 
+=========== [BUCLES - WHILE/FOR/REPEAT] ==========
+==================================================
+
+
+While <condition> / While_not <condition>
+...
+end_while
+
+For #<name> <beginning> <end> [a step]
+...
+End_for
+
+Repeat <number>
+...
+End_Repeat
+
+================================================== 
+============= [RUTINAS - GOTO/GOSUB] =============
+==================================================
+Goto <label>
+GoSub <label>
+
+:<Label>
+Return
+
+================================================== 
+============== [RUTINA  - PROCEDURE] =============
+==================================================
+! 
+proc <name>
+...
+end_proc
+
+.....
+call <name>
+
+
+================================================== 
+=================== [EXTERNOS] ===================
+==================================================
+
+Alarm [xxx.wav]
+Msg [the text]
+Flash
+Exec <command> [parameters] // Exec c:\test.exe #name #lastmsg
+Terminate <caption of a window>
+macro_load <a name of a file>
+macro_play [number]
+
+
+
+
